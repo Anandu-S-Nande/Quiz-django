@@ -22,12 +22,10 @@ def score(request):
                 correct+=1
             else:
                 wrong+=1
-        # percent = result/(total*10) *100
         context = {
             'result' : result,
             'correct' : correct,
             'wrong' : wrong,
-            # 'percent':percent,
             'total' : total,
         }
         return render(request,'score.html',context)
